@@ -1,0 +1,10 @@
+---
+- name: Install SonarQube 
+  hosts: localhost
+  become: true
+  vars:
+    sonarqube_version: "8.9.2" 
+    sonarqube_download_url: "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-{{ sonarqube_version }}.zip"
+
+  roles:
+    - sonarqubetask
